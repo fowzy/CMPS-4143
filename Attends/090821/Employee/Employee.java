@@ -3,15 +3,17 @@ class Employee {
     int age;
     String name;
     long salary;
-
+    String designation;
     public Employee(String employeeName){
         name = employeeName;
     }
 
-    public Employee(String employeeName, int employeeAge, long employeeSalary){
+    public Employee(String employeeName, int employeeAge,String newDesignation, long employeeSalary){
         name = employeeName;
         age = employeeAge;
         salary = employeeSalary;
+        designation = newDesignation;
+
     }
     // Setter:  set a new name
     public void set_name(String newName){
@@ -43,5 +45,14 @@ class Employee {
         return salary;
     } 
 
+    // Setter: set a designation
+    public void set_designation(String newDesignation){
+        designation = newDesignation;
+    }
+
+    // Getter: get the designation
+    public String get_designation(){
+        return designation;
+    } 
     
 }
