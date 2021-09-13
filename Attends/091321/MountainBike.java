@@ -13,10 +13,11 @@ public class MountainBike extends Bicycle {
         seatHeight = newSeatHeight;
     }
 
+    @Override
     // Method with same name as the parent class so what's going to happen now is
     // the child class you will overwrite the result from the parent class.
     public String showStatus() {
-        return ("I'm the child and this is my gear: " + gear + "\n" + "Speed is: " + speed + "\n My seat Height is :"
+        return ("I'm the child and this is my gear: " + gear + "\nSpeed is: " + speed + "\nMy seat Height is :"
                 + seatHeight);
     }
 }
