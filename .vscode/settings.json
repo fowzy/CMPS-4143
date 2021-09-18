@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "iostream": "cpp"
+    },
+    "java.project.sourcePaths": [
+        "Assignments",
+        "Attends/091521"
+    ]
+}
