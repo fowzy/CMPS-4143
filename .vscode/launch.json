@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch CharacterCount",
+            "request": "launch",
+            "mainClass": "CharacterCount",
+            "projectName": "CMPS-4143_422fdf73"
+        },
+        {
             "name": "g++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
