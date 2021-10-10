@@ -18,3 +18,6 @@ https://ieeexplore.ieee.org/document/8798568
 https://www.slideshare.net/EricHGoldman/evil-twin-demonstration
 https://www.slideshare.net/null0x00/evil-twin-22792530
 https://www.slideshare.net/paulgillingwater/wifi-hacking
+
+Python Resources:
+https://www.thepythoncode.com/article/building-wifi-scanner-in-python-scapy
