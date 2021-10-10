@@ -18,7 +18,7 @@ public class Calculator{
     // public int modulo(int _a, int _b){
     //     return (_a%_b);
     // }
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         while(true){
         try {
@@ -31,8 +31,6 @@ public class Calculator{
         }
         catch (RuntimeError r) {
             System.out.println("You cann't do that.");
-        }
-        catch (SyntaxError e) {
         }
     }
 }
