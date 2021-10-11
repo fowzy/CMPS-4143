@@ -9,12 +9,11 @@
 public class Main {
     public static void main(String[] args) {
         // c. Create at least 5 animals from each family; previveron member cannot be produced
-        Theria Theria1 = new Theria();
-        Theria Boreoeutheria1 = new Boreoeutheria();
-        Theria Xenarthra1 = new Xenarthra();
-        Theria Glires1 = new Glires();
-        Theria Ferae1 = new Ferae();
-
+        Euarchonta Euarchonta1 = new Euarchonta();
+        Eulipotyphia Eulipotyphia1 = new Eulipotyphia();
+        Afrotheria Afrotheria1 = new Afrotheria();
+        Marsupialia Marsupialia1 = new Marsupialia();
+        Monotremata Monotremata1 = new Monotremata();
         
     }
 }
