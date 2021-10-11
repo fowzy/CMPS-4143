@@ -1,0 +1,7 @@
+X = 1+ 2 + (3   Syntax error: ‘)’ expected 
+Y = 2 + 5 = 3   Syntax error: unexpected ‘=’ 
+Y = 6*Z+5     Syntax error: more than one variable 
+Y 3+5+(1+6)   Syntax error: ‘=’ expected 
+Z = (3+5)/0   Runtime error: Divide by zero occurred 
+A = 7*6/2     A = 21
+X = 1+ 2 + (3)-4+3
