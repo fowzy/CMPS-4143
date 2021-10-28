@@ -31,16 +31,14 @@ public class Calculator {
         try {
             // Processing the data that user inputs through the Scanner
             // Taking an input from user and removing spaces using regex
-
             String in = (input.nextLine()).replaceAll("\\s", "");
             // Filter the numbers out the string using regex and removing math symbols like:
             // +*-/%= and other symbols and letters () a-z and A-Z
             String[] numbers = in.split("\\+|\\-|\\*|\\%|\\=|\\(|\\)|\\/|[A-Z]|[a-z]");
             // Now we are filtering our operations so we could see what kind of math
             // operations are we doing and it will in order
-            String[] operators = in.split("\\d|[A-Z]|[a-z]|\\^");
-            
-            // String[] brackets = in.split("\\d|\\+|\\-|\\*|\\%|\\=|\\/|[A-Z]|[a-z]");
+            String[] operators = in.split("\\d|[A-Z]|[a-z]|(?!^)");
+            // getting the brackets filtered
             // filtering the string again to get the variable so we could use it later in
             // our SyntaxError Exceptions
             String[] variables = in.split("\\d|\\+|\\-|\\*|\\%|\\=|\\(|\\)|\\/");
@@ -51,49 +49,29 @@ public class Calculator {
                 throw new SyntaxError("Syntax error: more than one variable");
             }
             // if statement to do the following: if you can't find an equal sign means there
-            // 
+            // also found the missing brackets
             int counterBRACKET = 0;
             for (String ops: operators) {
-                System.out.println(ops);
                 if(ops.contains("=")) {
-                    equal++;
+                    equal++; // counting the equal sign
                 }
-                if(ops.contains("(")){
-                    counterBRACKET++;
+                // NOW I'm having two if statement to count the brackets and later on we're going to use counterBRACKET to see if there is any missing one
+                if(ops.contains("(")){ // if you find this add one 
+                    counterBRACKET++;  
                 }
-                if(ops.contains(")")){
+                if(ops.contains(")")){ // if you find this minus one
                     counterBRACKET--;
                 }
             }
-            if(counterBRACKET != 0){
-                throw new SyntaxError("Syntax error: ‘)’ expected");
-            }
-
-            // if(!bracketNOTFOUND){
-            //     throw new SyntaxError("Syntax error: ‘)’ expected");
-            // }
-            if (equal > 1) {
+            if (equal > 1) { // if we have more than one equal sign then give this error
                 throw new SyntaxError("Syntax error: unexpected ‘=’");
             }
-            if (equal == 0) {
+            if (equal == 0) { // if we have 0 equal sign throw this Syntax error
                 throw new SyntaxError("Syntax error: ‘=’ expected");
             }
-
-            // if statement do the following: if you can't find all () prenthesis then throw
-            // an error
-
-            // Last if statement to see if we're deviding by zero if YES then through an
-            // eerror
-
-            // for (String num : numbers)
-            //     System.out.print(num + " ");
-            // System.out.println("\n");
-            // for (String ops : operators)
-            //     System.out.print(ops + " ");
-            // System.out.println("\n");
-            // for (String var : variables)
-            //     System.out.print(var + " ");
-            // System.out.println("\n");
+            if(counterBRACKET != 0){ // if the counterBRACKET not zero then there is missing one
+                throw new SyntaxError("Syntax error: ‘)’ expected");
+            }
 
         } catch (SyntaxError e) {
             System.out.println(e.getMessage());
