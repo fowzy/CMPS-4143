@@ -15,8 +15,7 @@ class Bicycle:
 class mountainBike(Bicycle):
     seatHeight=int()
     def __init__(self, g=None, s=None, sh=None):
-        self.gear = g
-        self.speed = s
+        super().__init__(g,s)
         self.seatHeight = sh
     def status(self):
         print(f'Speed is {self.speed}\n Gear is {self.gear} \n seat Height {self.seatHeight}')
