@@ -13,8 +13,6 @@ class Bicycle:
 
 # Mountain Bike inh. from Bicycle
 class mountainBike(Bicycle):
-    gear=int()
-    speed=int()
     seatHeight=int()
     def __init__(self, g=None, s=None, sh=None):
         self.gear = g
