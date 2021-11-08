@@ -27,7 +27,9 @@ bik1 = Bicycle(5,66)
 
 # Get the status before
 print('the Status before changing speed')
+print('Mountain status is: ')
 mb1.status()
+print('Bicycle Bike status is: ')
 bik1.status()
 
 # Speed Up my mountain bike by 4 mph
@@ -38,6 +40,8 @@ bik1.brake(6)
 
 # Get the status after
 print('the Status after changed the speed')
+print('Mountain status is: ')
 mb1.status()
+print('Bicycle Bike status is: ')
 bik1.status()
 
