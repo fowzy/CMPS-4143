@@ -1,0 +1,8 @@
+John Ferguson
+Highest grade: 99
+Lowest grade 55
+Class average: 80.4
+Freshmen: 4
+Sophomores: 1
+Juniors: 3
+Seniors: 2
